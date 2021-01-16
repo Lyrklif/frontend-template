@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "src/js",
+    "rootDir": "src",
     "outDir": "dist",
     "target": "es2020",
     "lib": [
