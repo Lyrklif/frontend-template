@@ -2,9 +2,9 @@
 //Основной размер шрифта. Без надобности не менять. Все шрифты переведены в rem. В файле variable-fonts.scss создан миксин, который преобразует px в rem
 $html-font-size: 16;
 
-html {
-  // font-size: $html-font-size + px;
-}
+// html {
+// font-size: $html-font-size + px;
+// }
 
 // Шрифты
 // $font-family: 'Roboto',
