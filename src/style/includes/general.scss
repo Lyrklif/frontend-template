@@ -1,5 +1,11 @@
 // Основные стили проекта
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -10,6 +16,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   --webkittouch-callout: none; // iOS Safari
+}
+
+.body_hidden {
+  overflow: hidden !important;
 }
 
 .d-none {

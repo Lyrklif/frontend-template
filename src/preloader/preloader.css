@@ -1,0 +1,39 @@
+@keyframes preloader {
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+  z-index: 1000;
+}
+
+.preloader_show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.preloader p {
+  animation: preloader 1s linear infinite;
+}

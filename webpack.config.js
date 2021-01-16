@@ -125,7 +125,14 @@ module.exports = env => ({
     new CopyWebpackPlugin([{
       from: staticPath,
       to: dist
-    }]),
+    }, {
+      from: `${src}/preloader/preloader.js`,
+      to: `${dist}/js/`,
+    }, {
+      from: `${src}/preloader/preloader.css`,
+      to: `${dist}/css/`,
+    }
+    ]),
     new CleanWebpackPlugin(dist),
     new IfPlugin(
       env === 'server',

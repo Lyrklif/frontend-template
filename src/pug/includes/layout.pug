@@ -1,10 +1,12 @@
 include ../mixins/img
 include ../mixins/icon
+include ../../preloader/preloader
 
 block variables
 
 doctype html
 html(lang='ru')
   include ./head
-  body
+  body.body_hidden
     block content
+    +preloader
