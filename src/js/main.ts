@@ -5,7 +5,7 @@
 import { hide, show, toggle } from './functions/show-hide-toggle'
 import { App } from './functions/app'
 import { getSearchParams } from './functions/url'
-import { loadScript, simulateMouseClick } from './functions/html'
+import { loadScript, simulateMouseClick, smoothScroll } from './functions/html'
 
 
 // *** скрипты для отдельных страниц
@@ -22,6 +22,7 @@ declare global {
     loadScript: Function,
     simulateMouseClick: Function,
     getSearchParams: Function,
+    smoothScroll: Function,
     getTransitionEndEventName: Function,
 
     opera: any,
@@ -43,6 +44,7 @@ window.addEventListener('load', () => {
   window.getSearchParams = getSearchParams || {} // возвращает search парметр из url строки
   window.loadScript = loadScript || {} // добавляет в html тег <script> с ссылкой на скрипт, который нужно загрузить
   window.simulateMouseClick = simulateMouseClick || {} // симулировать клик мыши по html элементу
+  window.smoothScroll = smoothScroll || {} // плавный скролл к цели
 
   // сделать параметры доступными из любого места программы
   window.App = App || {} // основные параметры
