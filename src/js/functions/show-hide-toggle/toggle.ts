@@ -1,3 +1,5 @@
+'use strict'
+
 import {ParamsInterface, defaultParams, show, hide} from './index'
 
 /**

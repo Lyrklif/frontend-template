@@ -1,3 +1,5 @@
+'use strict'
+
 // browsers
 
 // Opera 8.0+

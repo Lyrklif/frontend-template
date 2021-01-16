@@ -1,3 +1,5 @@
+'use strict'
+
 // show-hide-toggle
 import show from './show'
 import hide from './hide'
