@@ -16,17 +16,41 @@ import {
 
 import getTransitionEndEventName from './getTransitionEndEventName'
 
+type AppType = {
+  // events name
+  transitionEndName: String, // название события transition end, которое работает в данном браузере
+  // screen size
+  scrollbarWidth: Number, // ширина скроллбара
+  contentWidth: Number, // ширина окна прокрутка (без скроллбара)
+  fullWidth: Number, // вся ширина окна
+  contentHeight: Number, // высота окна минус прокрутка (без скроллбара)
+  fullHeight: Number, // вся высота окна
+  // phone types
+  isMobile: Boolean, // это мобильное устройство?
+  isTablet: Boolean, // это планшет?
+  isMobileOrTablet: Boolean, // это планшет или мобильное устройство?
+  // OS
+  isAndroid: Boolean, // это андроид?
+  isiOS: Boolean, // это ios?
+  isWindowsMobile: Boolean, // это windows phone?
+  // browsers
+  isOpera: Boolean,
+  isFirefox: Boolean,
+  isSafari: Boolean,
+  isIE: Boolean,
+  isEdge: Boolean,
+  isChrome: Boolean,
+  isEdgeChromium: Boolean,
+}
 
-const App = {
-  // название события transition end, которое работает в данном браузере
+const App: AppType = {
   transitionEndName: getTransitionEndEventName(),
 
-  // ширина скроллбара
   scrollbarWidth: window.innerWidth - document.documentElement.clientWidth || 0,
-  // ширина контента страницы (без скроллбара)
-  contentWidth: isMobile ? document.documentElement.clientWidth : window.innerWidth,
-  // высота экрана
-  contentHeight: isMobile ? document.documentElement.clientHeight : window.innerHeight,
+  contentWidth: isMobile.any() ? document.documentElement.clientWidth : window.innerWidth,
+  fullWidth: window.innerWidth,
+  contentHeight: isMobile.any() ? document.documentElement.clientHeight : window.innerHeight,
+  fullHeight: window.innerHeight,
 
   isMobile: isMobile.any(), // если мобильное устройство
   isTablet: !!tabletCheck(), //если планшет
@@ -36,7 +60,6 @@ const App = {
   isiOS: isMobile.iOS(), // если ios
   isWindowsMobile: isMobile.Windows(), // если windows phone
 
-  // browsers
   isOpera: !!isOpera, // если это браузер Opera
   isFirefox: !!isFirefox, // если это браузер Firefox
   isSafari: !!isSafari, // если это браузер Safari
