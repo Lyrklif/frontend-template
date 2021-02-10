@@ -103,6 +103,14 @@ module.exports = env => ({
         loaders: [{
           loader: "pug-loader"
         }],
+        // use: [
+        //   {
+        //     loader: 'storypug/lib/webpack-loader.js',
+        //     options: {
+        //       root: `${src}/components`,
+        //     },
+        //   },
+        // ],
       }
     ]
   },
