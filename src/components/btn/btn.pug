@@ -1,0 +1,21 @@
+
+mixin btn(params={})
+  - const defaultParams = {}
+  - defaultParams.type = 'button'
+  - defaultParams.tag = 'button'
+  - defaultParams.disabled = false
+  - defaultParams.loading = false
+  - defaultParams.startIcon = null
+  - defaultParams.endIcon = null
+  - defaultParams.classes = ''
+
+  - const props = { ...defaultParams, ...params }
+
+  #{props.tag}(type=props.type class=`btn ${classes || ''}`)&attributes(attributes)
+    if startIcon
+      span.btn__icon.btn__icon--start: startIcon
+
+    span.btn__text: block
+
+    if endIcon
+      span.btn__icon.btn__icon--end: endIcon

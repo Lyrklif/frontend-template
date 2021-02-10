@@ -1,11 +1,15 @@
 @charset 'UTF-8';
 
+@import './includes/variables';
 @import './includes/general';
 @import './includes/functions';
 @import './includes/mixins';
 @import './includes/settings';
 @import './includes/typography';
 @import './includes/initial_parameters.scss';
+
+// components
+@import '../components//btn/btn.scss';
 
 /*
 Шпаргалка

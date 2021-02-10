@@ -1,0 +1,30 @@
+.btn {
+  --height: 56px;
+  --width: auto;
+  --cursor: pointer;
+  --border-radius: 1px;
+  --border-width: 1px;
+  --border-color: transparent;
+  --position: relative;
+  --display: inline-flex;
+  --background-color: transparent;
+  --text-transform: none;
+  --transition: background-color var(--easing), color var(--easing), border-color var(--easing), box-shadow var(--easing);
+
+  background-color: var(--background-color);
+  cursor: var(--cursor);
+  user-select: none;
+  width: var(--width);
+  height: var(--height);
+  min-height: var(--height);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--border-color);
+  position: var(--position);
+  display: var(--display);
+  text-transform: var(--text-transform);
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+  font-size: 1rem;
+  line-height: 1em;
+}
