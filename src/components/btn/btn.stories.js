@@ -8,7 +8,7 @@ const typeOptions = ['button', 'submit']
 const tagOptions = ['button', 'a', 'div']
 
 export default {
-  title: 'Компоненты/Btn',
+  title: 'Components/Btn',
   parameters: {
     docs: {
       description: {

@@ -1,0 +1,17 @@
+mixin loader(params={})
+  - const defaultParams = {
+  - tag: 'div',
+  - size: '',
+  - classes: '',
+  - centred: true,
+  - }
+
+  - const props = { ...defaultParams, ...params }
+  - let className = `loader ${props.classes || ''}`
+
+  - if(props.size && props.size !== 'normal') className += ` loader--${props.size}`
+  - if(props.centred) className += ` loader_centred`
+
+  - const attrs = { ...attributes, class: className }
+
+  #{props.tag}&attributes(attrs)

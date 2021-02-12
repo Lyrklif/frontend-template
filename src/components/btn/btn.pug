@@ -1,4 +1,4 @@
-
+include ../loader/loader
 
 mixin btn(params={})
   - const defaultParams = {
@@ -33,6 +33,7 @@ mixin btn(params={})
       span.btn__icon.btn__icon--start: #{props.startIcon}
 
     span.btn__text: block
+    +loader({ tag: 'span', classes: "btn__loader" })
 
     if props.endIcon
       span.btn__icon.btn__icon--end: #{props.endIcon}
