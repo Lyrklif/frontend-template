@@ -1,0 +1,13 @@
+mixin text(params={})
+  - const defaultParams = {
+  - tag: 'p',
+  - variant: '',
+  - classes: '',
+  - }
+
+  - const props = { ...defaultParams, ...params }
+  - let className = `${props.variant} ${props.classes || ''}`
+
+  - const attrs = { ...attributes, class: className }
+
+  #{props.tag}&attributes(attrs): block
